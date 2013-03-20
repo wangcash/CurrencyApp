@@ -57,16 +57,8 @@
 //        [MBProgressHUD hideHUDForView:self.view animated:YES];
 //      });
 //      
-//      [NSThread sleepForTimeInterval:3];
+//      [NSThread sleepForTimeInterval:kLDRefresh_Interval];
 //    }
-//  });
-  
-  
-//  dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-//    [self refreshInBackground];
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//      
-//    });
 //  });
   
   
