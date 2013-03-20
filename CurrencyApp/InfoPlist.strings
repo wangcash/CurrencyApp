@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  CurrencyApp
+
+  Created by Cash on 13-3-18.
+  Copyright (c) 2013年 LYFORD INTERNATIONAL TRADING PORT PTY.LTD. All rights reserved.
+*/
+
+CFBundleName="Forex App";
+CFBundleDisplayName="Forex App";
