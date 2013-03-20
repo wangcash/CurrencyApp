@@ -38,22 +38,42 @@
 {
   [super viewDidLoad];
   
+  /* GCD方式实现 */
+//  [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//  
 //  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//    // 耗时的操作
-//    NSString *urlString = [NSString stringWithFormat:@"%@?_=%u", kLDFxall_TopRates_Url, (NSUInteger)[[NSDate date] timeIntervalSince1970]];
-//    NSURL *url = [NSURL URLWithString:urlString];
-//    NSString *responseString = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
-//    NSDictionary *dict = [responseString objectFromJSONString];
-//    self.ratesDictionary = [dict objectForKey:@"rates"];
-//    NSLog(@"%@", responseString);
 //    
+//    while (true) {
+//      // 下载数据
+//      NSString *urlString = [NSString stringWithFormat:@"%@?_=%u", kLDFxall_TopRates_Url, (NSUInteger)[[NSDate date] timeIntervalSince1970]];
+//      NSURL *url = [NSURL URLWithString:urlString];
+//      NSString *responseString = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+//      NSDictionary *dict = [responseString objectFromJSONString];
+//      self.ratesDictionary = [dict objectForKey:@"rates"];
+//      //NSLog(@"%@", responseString);
+//      
+//      dispatch_async(dispatch_get_main_queue(), ^{
+//        [self.contentView reloadData];
+//        [MBProgressHUD hideHUDForView:self.view animated:YES];
+//      });
+//      
+//      [NSThread sleepForTimeInterval:3];
+//    }
+//  });
+  
+  
+//  dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+//    [self refreshInBackground];
 //    dispatch_async(dispatch_get_main_queue(), ^{
-//      [self.contentView reloadData];
+//      
 //    });
 //  });
   
-  [self refreshInBackground];
   
+  /* NSTimer方式实现 */
+  [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+  
+  [self refreshInBackground];
   self.timer = [NSTimer scheduledTimerWithTimeInterval:kLDRefresh_Interval
                                                 target:self
                                               selector:@selector(refreshInBackground)
@@ -64,7 +84,6 @@
 - (void)didReceiveMemoryWarning
 {
   [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
 }
 
 /**
@@ -81,9 +100,11 @@
     NSDictionary *dict = [responseString objectFromJSONString];
     self.ratesDictionary = [dict objectForKey:@"rates"];
     [self.contentView reloadData];
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
   }];
   [request setFailedBlock:^{
 //    NSError *error = [request error];
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
   }];
   [request startAsynchronous];
 }

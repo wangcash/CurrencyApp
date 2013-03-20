@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBProgressHUD.h"
 
 @class LDNavigationBar;
 
 #define kLDFxall_TopRates_Url  @"http://www.fxall.com/web-rateticker/topRates"
 #define kLDRefresh_Interval    3
 
-@interface LDViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface LDViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,MBProgressHUDDelegate>
 
 @property (nonatomic, retain) NSArray       *curKeysArray;
 @property (nonatomic, retain) NSDictionary  *ratesDictionary;
