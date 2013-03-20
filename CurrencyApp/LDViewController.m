@@ -13,6 +13,8 @@
 #import "ASIHTTPRequest.h"
 #import "JSONKit.h"
 
+#define __Used_NSTimer__
+
 @interface LDViewController ()
 
 
@@ -38,38 +40,7 @@
 {
   [super viewDidLoad];
   
-  /* GCD方式实现 */
-//  [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-//  
-//  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//    
-//    while (true) {
-//      // 下载数据
-//      NSString *urlString = [NSString stringWithFormat:@"%@?_=%u", kLDFxall_TopRates_Url, (NSUInteger)[[NSDate date] timeIntervalSince1970]];
-//      NSURL *url = [NSURL URLWithString:urlString];
-//      NSString *responseString = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
-//      NSDictionary *dict = [responseString objectFromJSONString];
-//      self.ratesDictionary = [dict objectForKey:@"rates"];
-//      //NSLog(@"%@", responseString);
-//      
-//      dispatch_async(dispatch_get_main_queue(), ^{
-//        [self.contentView reloadData];
-//        [MBProgressHUD hideHUDForView:self.view animated:YES];
-//      });
-//      
-//      [NSThread sleepForTimeInterval:3];
-//    }
-//  });
-  
-  
-//  dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-//    [self refreshInBackground];
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//      
-//    });
-//  });
-  
-  
+#ifdef __Used_NSTimer__
   /* NSTimer方式实现 */
   [MBProgressHUD showHUDAddedTo:self.view animated:YES];
   
@@ -79,6 +50,31 @@
                                               selector:@selector(refreshInBackground)
                                               userInfo:nil
                                                repeats:YES];
+#else
+  /* GCD方式实现 */
+  [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+
+  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+
+    while (true) {
+      // 下载数据
+      NSString *urlString = [NSString stringWithFormat:@"%@?_=%u", kLDFxall_TopRates_Url, (NSUInteger)[[NSDate date] timeIntervalSince1970]];
+      NSURL *url = [NSURL URLWithString:urlString];
+      NSString *responseString = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+      NSDictionary *dict = [responseString objectFromJSONString];
+      self.ratesDictionary = [dict objectForKey:@"rates"];
+      //NSLog(@"%@", responseString);
+
+      dispatch_async(dispatch_get_main_queue(), ^{
+        [self.contentView reloadData];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+      });
+
+      [NSThread sleepForTimeInterval:3];
+    }
+  });
+#endif
+  
 }
 
 - (void)didReceiveMemoryWarning
@@ -86,6 +82,7 @@
   [super didReceiveMemoryWarning];
 }
 
+#ifdef __Used_NSTimer__
 /**
  * 更新数据并发出重绘tableview消息
  */
@@ -108,6 +105,7 @@
   }];
   [request startAsynchronous];
 }
+#endif
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
