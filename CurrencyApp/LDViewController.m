@@ -45,11 +45,7 @@
   [MBProgressHUD showHUDAddedTo:self.view animated:YES];
   
   [self refreshInBackground];
-  self.timer = [NSTimer scheduledTimerWithTimeInterval:kLDRefresh_Interval
-                                                target:self
-                                              selector:@selector(refreshInBackground)
-                                              userInfo:nil
-                                               repeats:YES];
+  [self makeTimer];
 #else
   /* GCD方式实现 */
   [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -83,6 +79,40 @@
 }
 
 #ifdef __Used_NSTimer__
+- (void)makeTimer
+{
+  if (self.timer == nil) {
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:kLDRefresh_Interval
+                                                  target:self
+                                                selector:@selector(refreshInBackground)
+                                                userInfo:nil
+                                                 repeats:YES];
+  }
+}
+
+- (void)destroyTimer
+{
+  if (self.timer) {
+    [self.timer invalidate];
+    self.timer = nil;
+  }
+}
+
+- (void)showAlert
+{
+  if (self.alertor == nil) {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"错误"
+                                                    message:@"连接服务器失败！"
+                                                   delegate:self
+                                          cancelButtonTitle:@"取消"
+                                          otherButtonTitles:@"尝试重连", nil];
+    self.alertor = alert;
+    [alert release];
+    
+    [self.alertor show];
+  }
+}
+
 /**
  * 更新数据并发出重绘tableview消息
  */
@@ -100,10 +130,30 @@
     [MBProgressHUD hideHUDForView:self.view animated:YES];
   }];
   [request setFailedBlock:^{
-//    NSError *error = [request error];
+    //NSError *error = [request error];
     [MBProgressHUD hideHUDForView:self.view animated:YES];
+    
+    [self destroyTimer];
+    [self showAlert];
+
+    NSLog(@"alert");
   }];
   [request startAsynchronous];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+  switch (buttonIndex) {
+    case 1: //尝试重连
+      [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+      [self refreshInBackground];
+      [self makeTimer];
+      break;
+      
+    default: //取消
+      break;
+  }
+  self.alertor = nil;
 }
 #endif
 
