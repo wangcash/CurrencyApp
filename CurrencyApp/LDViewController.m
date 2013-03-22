@@ -13,7 +13,7 @@
 #import "ASIHTTPRequest.h"
 #import "JSONKit.h"
 
-#define __Used_NSTimer__
+//#define __Used_NSTimer__
 
 @interface LDViewController ()
 
@@ -48,27 +48,7 @@
   [self makeTimer];
 #else
   /* GCD方式实现 */
-  [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-
-  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-
-    while (true) {
-      // 下载数据
-      NSString *urlString = [NSString stringWithFormat:@"%@?_=%u", kLDFxall_TopRates_Url, (NSUInteger)[[NSDate date] timeIntervalSince1970]];
-      NSURL *url = [NSURL URLWithString:urlString];
-      NSString *responseString = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
-      NSDictionary *dict = [responseString objectFromJSONString];
-      self.ratesDictionary = [dict objectForKey:@"rates"];
-      //NSLog(@"%@", responseString);
-
-      dispatch_async(dispatch_get_main_queue(), ^{
-        [self.contentView reloadData];
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
-      });
-
-      [NSThread sleepForTimeInterval:3];
-    }
-  });
+  [self refreshInBackground];
 #endif
   
 }
@@ -136,7 +116,7 @@
     [self destroyTimer];
     [self showAlert];
 
-    NSLog(@"alert");
+//    NSLog(@"alert");
   }];
   [request startAsynchronous];
 }
@@ -154,6 +134,62 @@
       break;
   }
   self.alertor = nil;
+}
+#else
+/**
+ * 更新数据并发出重绘tableview消息
+ */
+- (void)refreshInBackground
+{
+  [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+  
+  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    while (true) {
+      // 下载数据
+      NSError *error;
+      NSString *urlString = [NSString stringWithFormat:@"%@?_=%u", kLDFxall_TopRates_Url, (NSUInteger)[[NSDate date] timeIntervalSince1970]];
+      NSURL *url = [NSURL URLWithString:urlString];
+      NSString *responseString = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error];
+      
+      if (error == NULL) {
+        NSDictionary *dict = [responseString objectFromJSONString];
+        self.ratesDictionary = [dict objectForKey:@"rates"];
+        //NSLog(@"%@", responseString);
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+          [self.contentView reloadData];
+          [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+        
+        [NSThread sleepForTimeInterval:3];
+      }
+      else {
+        dispatch_async(dispatch_get_main_queue(), ^{
+          [MBProgressHUD hideHUDForView:self.view animated:YES];
+          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"错误"
+                                                          message:@"连接服务器失败！"
+                                                         delegate:self
+                                                cancelButtonTitle:@"取消"
+                                                otherButtonTitles:@"尝试重连", nil];
+          [alert show];
+          [alert release];
+        });
+        break;
+      }
+    }
+  });
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+  switch (buttonIndex) {
+    case 1: //尝试重连
+      [self refreshInBackground];
+      break;
+      
+    default: //取消
+      break;
+  }
 }
 #endif
 
