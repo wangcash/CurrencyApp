@@ -59,15 +59,14 @@
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
     while (true) {
       // 下载数据
-      NSError *error;
       NSString *urlString = [NSString stringWithFormat:@"%@?_=%u", kLDFxall_TopRates_Url, (NSUInteger)[[NSDate date] timeIntervalSince1970]];
       NSURL *url = [NSURL URLWithString:urlString];
-      NSString *responseString = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error];
-      
-      if (error == NULL) {
-        NSDictionary *dict = [responseString objectFromJSONString];
+      ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+      [request startSynchronous];
+      NSError *error = [request error];
+      if (!error) {
+        NSDictionary *dict = [[request responseString] objectFromJSONString];
         self.ratesDictionary = [dict objectForKey:@"rates"];
-        //NSLog(@"%@", responseString);
         
         dispatch_async(dispatch_get_main_queue(), ^{
           [self.contentView reloadData];
