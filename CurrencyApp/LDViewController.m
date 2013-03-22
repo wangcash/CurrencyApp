@@ -13,8 +13,6 @@
 #import "ASIHTTPRequest.h"
 #import "JSONKit.h"
 
-//#define __Used_NSTimer__
-
 @interface LDViewController ()
 
 
@@ -40,16 +38,8 @@
 {
   [super viewDidLoad];
   
-#ifdef __Used_NSTimer__
-  /* NSTimer方式实现 */
-  [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-  
-  [self refreshInBackground];
-  [self makeTimer];
-#else
   /* GCD方式实现 */
   [self refreshInBackground];
-#endif
   
 }
 
@@ -58,84 +48,7 @@
   [super didReceiveMemoryWarning];
 }
 
-#ifdef __Used_NSTimer__
-- (void)makeTimer
-{
-  if (self.timer == nil) {
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:kLDRefresh_Interval
-                                                  target:self
-                                                selector:@selector(refreshInBackground)
-                                                userInfo:nil
-                                                 repeats:YES];
-  }
-}
 
-- (void)destroyTimer
-{
-  if (self.timer) {
-    [self.timer invalidate];
-    self.timer = nil;
-  }
-}
-
-- (void)showAlert
-{
-  if (self.alertor == nil) {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"错误"
-                                                    message:@"连接服务器失败！"
-                                                   delegate:self
-                                          cancelButtonTitle:@"取消"
-                                          otherButtonTitles:@"尝试重连", nil];
-    self.alertor = alert;
-    [alert release];
-    
-    [self.alertor show];
-  }
-}
-
-/**
- * 更新数据并发出重绘tableview消息
- */
-- (void)refreshInBackground
-{
-  NSString *urlString = [NSString stringWithFormat:@"%@?_=%u", kLDFxall_TopRates_Url, (NSUInteger)[[NSDate date] timeIntervalSince1970]];
-  
-  NSURL *url = [NSURL URLWithString:urlString];
-  __block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-  [request setCompletionBlock:^{
-    NSString *responseString = [request responseString];
-    NSDictionary *dict = [responseString objectFromJSONString];
-    self.ratesDictionary = [dict objectForKey:@"rates"];
-    [self.contentView reloadData];
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-  }];
-  [request setFailedBlock:^{
-    //NSError *error = [request error];
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-    
-    [self destroyTimer];
-    [self showAlert];
-
-//    NSLog(@"alert");
-  }];
-  [request startAsynchronous];
-}
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-  switch (buttonIndex) {
-    case 1: //尝试重连
-      [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-      [self refreshInBackground];
-      [self makeTimer];
-      break;
-      
-    default: //取消
-      break;
-  }
-  self.alertor = nil;
-}
-#else
 /**
  * 更新数据并发出重绘tableview消息
  */
@@ -191,7 +104,6 @@
       break;
   }
 }
-#endif
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {

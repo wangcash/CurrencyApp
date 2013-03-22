@@ -21,9 +21,6 @@
 
 @property (nonatomic, retain) IBOutlet UITableView *contentView;
 
-@property (nonatomic, retain) NSTimer *timer;
-@property (nonatomic, retain) UIAlertView *alertor;
-
 - (IBAction)linkLdport:(id)sender;
 
 - (IBAction)linkAnalyse:(id)sender;
