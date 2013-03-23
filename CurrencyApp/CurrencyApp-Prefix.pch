@@ -12,3 +12,9 @@
   #import <UIKit/UIKit.h>
   #import <Foundation/Foundation.h>
 #endif
+
+#if DEBUG
+  #warning NSLogs will be shown
+#else
+  #define NSLog(...) {}
+#endif
