@@ -19,6 +19,7 @@
 @property (nonatomic, retain) NSArray       *curKeysArray;
 @property (nonatomic, retain) NSDictionary  *ratesDictionary;
 
+@property (nonatomic, retain) IBOutlet UINavigationBar *navBar;
 @property (nonatomic, retain) IBOutlet UITableView *contentView;
 
 - (IBAction)linkLdport:(id)sender;

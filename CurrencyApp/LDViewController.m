@@ -38,6 +38,11 @@
 {
   [super viewDidLoad];
   
+  UIButton *titleButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+  [titleButton addTarget:self action:@selector(linkAnalyse:) forControlEvents:UIControlEventTouchUpInside];
+  self.navBar.topItem.titleView = titleButton;
+  [titleButton release];
+  
   /* GCD方式实现 */
   [self refreshInBackground];
   
