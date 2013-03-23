@@ -23,10 +23,12 @@
 		BD80E41A16FA286100CB9ED6 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = BD80E40E16FA286100CB9ED6 /* ASIInputStream.m */; };
 		BD80E41B16FA286100CB9ED6 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = BD80E41016FA286100CB9ED6 /* ASINetworkQueue.m */; };
 		BD80E41C16FA286100CB9ED6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = BD80E41316FA286100CB9ED6 /* Reachability.m */; };
-		BDCA395C16F6FAA3008ACE8B /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDCA395B16F6FAA3008ACE8B /* icon@2x.png */; };
+		BD8545F016FDF7650096D6E7 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8545EC16FDF7650096D6E7 /* icon.png */; };
+		BD8545F116FDF7650096D6E7 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8545ED16FDF7650096D6E7 /* icon@2x.png */; };
+		BD8545F216FDF7650096D6E7 /* NavBarBg.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8545EE16FDF7650096D6E7 /* NavBarBg.png */; };
+		BD8545F316FDF7650096D6E7 /* NavBarBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8545EF16FDF7650096D6E7 /* NavBarBg@2x.png */; };
 		BDCA395E16F7030C008ACE8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDCA395D16F7030C008ACE8B /* InfoPlist.strings */; };
 		BDCA396116F9876A008ACE8B /* UINavigationBar+Customized.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCA396016F9876A008ACE8B /* UINavigationBar+Customized.m */; };
-		BDCA396316F98A2B008ACE8B /* NavBarBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDCA396216F98A2B008ACE8B /* NavBarBg@2x.png */; };
 		BDFF507916E5D72C009ED9AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFF507816E5D72C009ED9AE /* UIKit.framework */; };
 		BDFF507B16E5D72C009ED9AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFF507A16E5D72C009ED9AE /* Foundation.framework */; };
 		BDFF507D16E5D72C009ED9AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFF507C16E5D72C009ED9AE /* CoreGraphics.framework */; };
@@ -83,11 +85,13 @@
 		BD80E41116FA286100CB9ED6 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
 		BD80E41216FA286100CB9ED6 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		BD80E41316FA286100CB9ED6 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		BDCA395B16F6FAA3008ACE8B /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		BD8545EC16FDF7650096D6E7 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		BD8545ED16FDF7650096D6E7 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		BD8545EE16FDF7650096D6E7 /* NavBarBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavBarBg.png; sourceTree = "<group>"; };
+		BD8545EF16FDF7650096D6E7 /* NavBarBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavBarBg@2x.png"; sourceTree = "<group>"; };
 		BDCA395D16F7030C008ACE8B /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		BDCA395F16F9876A008ACE8B /* UINavigationBar+Customized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Customized.h"; sourceTree = "<group>"; };
 		BDCA396016F9876A008ACE8B /* UINavigationBar+Customized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Customized.m"; sourceTree = "<group>"; };
-		BDCA396216F98A2B008ACE8B /* NavBarBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavBarBg@2x.png"; sourceTree = "<group>"; };
 		BDFF507516E5D72C009ED9AE /* CurrencyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDFF507816E5D72C009ED9AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BDFF507A16E5D72C009ED9AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -142,15 +146,6 @@
 			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
-		BD80E3F216FA15F600CB9ED6 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				BDCA396216F98A2B008ACE8B /* NavBarBg@2x.png */,
-				BDCA395B16F6FAA3008ACE8B /* icon@2x.png */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		BD80E3F916FA283F00CB9ED6 /* JSONKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +182,17 @@
 				BD80E41316FA286100CB9ED6 /* Reachability.m */,
 			);
 			path = ASIHTTPRequest;
+			sourceTree = "<group>";
+		};
+		BD8545EB16FDF7650096D6E7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BD8545EC16FDF7650096D6E7 /* icon.png */,
+				BD8545ED16FDF7650096D6E7 /* icon@2x.png */,
+				BD8545EE16FDF7650096D6E7 /* NavBarBg.png */,
+				BD8545EF16FDF7650096D6E7 /* NavBarBg@2x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		BDFF506C16E5D72C009ED9AE = {
@@ -228,7 +234,7 @@
 		BDFF507E16E5D72C009ED9AE /* CurrencyApp */ = {
 			isa = PBXGroup;
 			children = (
-				BD80E3F216FA15F600CB9ED6 /* Resources */,
+				BD8545EB16FDF7650096D6E7 /* Resources */,
 				BD80E3F316FA254A00CB9ED6 /* LDNavigationBar.h */,
 				BD80E3F416FA254A00CB9ED6 /* LDNavigationBar.m */,
 				BDCA395F16F9876A008ACE8B /* UINavigationBar+Customized.h */,
@@ -327,9 +333,11 @@
 				BDFF509816E5D72D009ED9AE /* LDViewController_iPad.xib in Resources */,
 				BDFF50D316E6498E009ED9AE /* CurrencyKeys.plist in Resources */,
 				BD29686916ECA6FB009D6397 /* LDHeadCell_iPhone.xib in Resources */,
-				BDCA395C16F6FAA3008ACE8B /* icon@2x.png in Resources */,
 				BDCA395E16F7030C008ACE8B /* InfoPlist.strings in Resources */,
-				BDCA396316F98A2B008ACE8B /* NavBarBg@2x.png in Resources */,
+				BD8545F016FDF7650096D6E7 /* icon.png in Resources */,
+				BD8545F116FDF7650096D6E7 /* icon@2x.png in Resources */,
+				BD8545F216FDF7650096D6E7 /* NavBarBg.png in Resources */,
+				BD8545F316FDF7650096D6E7 /* NavBarBg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
