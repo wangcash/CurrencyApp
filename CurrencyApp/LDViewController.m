@@ -39,7 +39,7 @@
   [super viewDidLoad];
   
   UIButton *titleButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
-  [titleButton addTarget:self action:@selector(linkAnalyse:) forControlEvents:UIControlEventTouchUpInside];
+  [titleButton addTarget:self action:@selector(linkLdport:) forControlEvents:UIControlEventTouchUpInside];
   self.navBar.topItem.titleView = titleButton;
   [titleButton release];
   
@@ -137,7 +137,7 @@
   [labelBottom release];
   
   UIButton *headerButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
-  [headerButton addTarget:self action:@selector(linkAnalyse:) forControlEvents:UIControlEventTouchUpInside];
+  [headerButton addTarget:self action:@selector(linkLdport:) forControlEvents:UIControlEventTouchUpInside];
   [view addSubview:headerButton];
   [headerButton release];
   
