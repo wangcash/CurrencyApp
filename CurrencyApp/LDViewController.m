@@ -136,6 +136,11 @@
   [view addSubview:labelBottom];
   [labelBottom release];
   
+  UIButton *headerButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
+  [headerButton addTarget:self action:@selector(linkAnalyse:) forControlEvents:UIControlEventTouchUpInside];
+  [view addSubview:headerButton];
+  [headerButton release];
+  
   return [view autorelease];
 }
 
@@ -185,7 +190,7 @@
       cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                      reuseIdentifier:LDHeadCellIdentifier] autorelease];
     }
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
   }
   else {
     cell = [tableView dequeueReusableCellWithIdentifier:LDCurrencyCellIdentifier];
