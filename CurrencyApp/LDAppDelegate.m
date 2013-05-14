@@ -22,13 +22,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-  // Override point for customization after application launch.
-//  if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-//    self.viewController = [[[LDViewController alloc] initWithNibName:@"LDViewController_iPhone" bundle:nil] autorelease];
-//  } else {
-//    self.viewController = [[[LDViewController alloc] initWithNibName:@"LDViewController_iPad" bundle:nil] autorelease];
-//  }
-//  self.window.rootViewController = self.viewController;
   
   self.mainViewController = [[[LDMainViewController alloc] init] autorelease];
   self.window.rootViewController = self.mainViewController;

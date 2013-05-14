@@ -6,51 +6,6 @@
 //  Copyright (c) 2013年 LYFORD INTERNATIONAL TRADING PORT PTY.LTD. All rights reserved.
 //
 
-//#import "LDMainViewController.h"
-//
-//#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
-//
-//
-//@interface LDMainViewController ()
-//
-//@end
-//
-//@implementation LDMainViewController
-//
-//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-//{
-//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-//    if (self) {
-//        // Custom initialization
-////      self.view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 480+(iPhone5?88:0))];
-//    }
-//    return self;
-//}
-//
-//- (id)init
-//{
-//  self = [super init];
-//  if (self) {
-////    self.view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 480+(iPhone5?88:0))];
-//  }
-//  return self;
-//}
-//
-//- (void)viewDidLoad
-//{
-//    [super viewDidLoad];
-//	// Do any additional setup after loading the view.
-//  self.view.backgroundColor = [UIColor redColor];
-//}
-//
-//- (void)didReceiveMemoryWarning
-//{
-//    [super didReceiveMemoryWarning];
-//    // Dispose of any resources that can be recreated.
-//}
-//
-//@end
-
 #import "LDMainViewController.h"
 #import "LDHeadCell.h"
 #import "LDCurrencyCell.h"
@@ -264,15 +219,9 @@
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
       [tableView registerNib:[UINib nibWithNibName:@"LDHeadCell_iPhone" bundle:nil]
       forCellReuseIdentifier:LDHeadCellIdentifier];
-      
-      //      [tableView registerNib:[UINib nibWithNibName:@"LDCurrencyCell_iPhone" bundle:nil]
-      //      forCellReuseIdentifier:LDCurrencyCellIdentifier];
     } else {
       [tableView registerNib:[UINib nibWithNibName:@"LDHeadCell_iPad" bundle:nil]
       forCellReuseIdentifier:LDHeadCellIdentifier];
-      
-      //      [tableView registerNib:[UINib nibWithNibName:@"LDCurrencyCell_iPad" bundle:nil]
-      //      forCellReuseIdentifier:LDCurrencyCellIdentifier];
     }
     nibsRegistered = YES;
   }
