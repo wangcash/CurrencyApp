@@ -27,6 +27,8 @@
 		BD84A0F016FFA38C001BB4D2 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD84A0EE16FFA38C001BB4D2 /* Icon@2x.png */; };
 		BD8545F216FDF7650096D6E7 /* NavBarBg.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8545EE16FDF7650096D6E7 /* NavBarBg.png */; };
 		BD8545F316FDF7650096D6E7 /* NavBarBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8545EF16FDF7650096D6E7 /* NavBarBg@2x.png */; };
+		BDC1DC35173EB2B10057BC7F /* LDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC1DC34173EB2B10057BC7F /* LDMainViewController.m */; };
+		BDC1DC39173EB8130057BC7F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDC1DC38173EB8130057BC7F /* Default-568h@2x.png */; };
 		BDCA395E16F7030C008ACE8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDCA395D16F7030C008ACE8B /* InfoPlist.strings */; };
 		BDCA396116F9876A008ACE8B /* UINavigationBar+Customized.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCA396016F9876A008ACE8B /* UINavigationBar+Customized.m */; };
 		BDFF507916E5D72C009ED9AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFF507816E5D72C009ED9AE /* UIKit.framework */; };
@@ -35,12 +37,6 @@
 		BDFF508316E5D72C009ED9AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDFF508116E5D72C009ED9AE /* InfoPlist.strings */; };
 		BDFF508516E5D72C009ED9AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF508416E5D72C009ED9AE /* main.m */; };
 		BDFF508916E5D72C009ED9AE /* LDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF508816E5D72C009ED9AE /* LDAppDelegate.m */; };
-		BDFF508B16E5D72D009ED9AE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BDFF508A16E5D72D009ED9AE /* Default.png */; };
-		BDFF508D16E5D72D009ED9AE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDFF508C16E5D72D009ED9AE /* Default@2x.png */; };
-		BDFF508F16E5D72D009ED9AE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDFF508E16E5D72D009ED9AE /* Default-568h@2x.png */; };
-		BDFF509216E5D72D009ED9AE /* LDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF509116E5D72D009ED9AE /* LDViewController.m */; };
-		BDFF509516E5D72D009ED9AE /* LDViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDFF509316E5D72D009ED9AE /* LDViewController_iPhone.xib */; };
-		BDFF509816E5D72D009ED9AE /* LDViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDFF509616E5D72D009ED9AE /* LDViewController_iPad.xib */; };
 		BDFF50A016E5E010009ED9AE /* LDCurrencyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFF509F16E5E010009ED9AE /* LDCurrencyCell.m */; };
 		BDFF50C716E6441B009ED9AE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFF50C616E6441B009ED9AE /* CFNetwork.framework */; };
 		BDFF50C916E6454C009ED9AE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFF50C816E6454C009ED9AE /* SystemConfiguration.framework */; };
@@ -89,6 +85,9 @@
 		BD84A0EE16FFA38C001BB4D2 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		BD8545EE16FDF7650096D6E7 /* NavBarBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavBarBg.png; sourceTree = "<group>"; };
 		BD8545EF16FDF7650096D6E7 /* NavBarBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavBarBg@2x.png"; sourceTree = "<group>"; };
+		BDC1DC33173EB2B10057BC7F /* LDMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDMainViewController.h; sourceTree = "<group>"; };
+		BDC1DC34173EB2B10057BC7F /* LDMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDMainViewController.m; sourceTree = "<group>"; };
+		BDC1DC38173EB8130057BC7F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BDCA395D16F7030C008ACE8B /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		BDCA395F16F9876A008ACE8B /* UINavigationBar+Customized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Customized.h"; sourceTree = "<group>"; };
 		BDCA396016F9876A008ACE8B /* UINavigationBar+Customized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Customized.m"; sourceTree = "<group>"; };
@@ -102,13 +101,6 @@
 		BDFF508616E5D72C009ED9AE /* CurrencyApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CurrencyApp-Prefix.pch"; sourceTree = "<group>"; };
 		BDFF508716E5D72C009ED9AE /* LDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDAppDelegate.h; sourceTree = "<group>"; };
 		BDFF508816E5D72C009ED9AE /* LDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDAppDelegate.m; sourceTree = "<group>"; };
-		BDFF508A16E5D72D009ED9AE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		BDFF508C16E5D72D009ED9AE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		BDFF508E16E5D72D009ED9AE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		BDFF509016E5D72D009ED9AE /* LDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDViewController.h; sourceTree = "<group>"; };
-		BDFF509116E5D72D009ED9AE /* LDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDViewController.m; sourceTree = "<group>"; };
-		BDFF509416E5D72D009ED9AE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LDViewController_iPhone.xib; sourceTree = "<group>"; };
-		BDFF509716E5D72D009ED9AE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LDViewController_iPad.xib; sourceTree = "<group>"; };
 		BDFF509E16E5E00F009ED9AE /* LDCurrencyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCurrencyCell.h; sourceTree = "<group>"; };
 		BDFF509F16E5E010009ED9AE /* LDCurrencyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCurrencyCell.m; sourceTree = "<group>"; };
 		BDFF50C616E6441B009ED9AE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -187,6 +179,7 @@
 		BD8545EB16FDF7650096D6E7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BDC1DC38173EB8130057BC7F /* Default-568h@2x.png */,
 				BD84A0ED16FFA38C001BB4D2 /* Icon.png */,
 				BD84A0EE16FFA38C001BB4D2 /* Icon@2x.png */,
 				BD8545EE16FDF7650096D6E7 /* NavBarBg.png */,
@@ -241,10 +234,8 @@
 				BDCA396016F9876A008ACE8B /* UINavigationBar+Customized.m */,
 				BDFF508716E5D72C009ED9AE /* LDAppDelegate.h */,
 				BDFF508816E5D72C009ED9AE /* LDAppDelegate.m */,
-				BDFF509016E5D72D009ED9AE /* LDViewController.h */,
-				BDFF509116E5D72D009ED9AE /* LDViewController.m */,
-				BDFF509316E5D72D009ED9AE /* LDViewController_iPhone.xib */,
-				BDFF509616E5D72D009ED9AE /* LDViewController_iPad.xib */,
+				BDC1DC33173EB2B10057BC7F /* LDMainViewController.h */,
+				BDC1DC34173EB2B10057BC7F /* LDMainViewController.m */,
 				BDFF509E16E5E00F009ED9AE /* LDCurrencyCell.h */,
 				BDFF509F16E5E010009ED9AE /* LDCurrencyCell.m */,
 				BD29686516ECA6BA009D6397 /* LDHeadCell.h */,
@@ -266,9 +257,6 @@
 				BDFF508116E5D72C009ED9AE /* InfoPlist.strings */,
 				BDFF508416E5D72C009ED9AE /* main.m */,
 				BDFF508616E5D72C009ED9AE /* CurrencyApp-Prefix.pch */,
-				BDFF508A16E5D72D009ED9AE /* Default.png */,
-				BDFF508C16E5D72D009ED9AE /* Default@2x.png */,
-				BDFF508E16E5D72D009ED9AE /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -326,11 +314,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDFF508316E5D72C009ED9AE /* InfoPlist.strings in Resources */,
-				BDFF508B16E5D72D009ED9AE /* Default.png in Resources */,
-				BDFF508D16E5D72D009ED9AE /* Default@2x.png in Resources */,
-				BDFF508F16E5D72D009ED9AE /* Default-568h@2x.png in Resources */,
-				BDFF509516E5D72D009ED9AE /* LDViewController_iPhone.xib in Resources */,
-				BDFF509816E5D72D009ED9AE /* LDViewController_iPad.xib in Resources */,
 				BDFF50D316E6498E009ED9AE /* CurrencyKeys.plist in Resources */,
 				BD29686916ECA6FB009D6397 /* LDHeadCell_iPhone.xib in Resources */,
 				BDCA395E16F7030C008ACE8B /* InfoPlist.strings in Resources */,
@@ -338,6 +321,7 @@
 				BD8545F316FDF7650096D6E7 /* NavBarBg@2x.png in Resources */,
 				BD84A0EF16FFA38C001BB4D2 /* Icon.png in Resources */,
 				BD84A0F016FFA38C001BB4D2 /* Icon@2x.png in Resources */,
+				BDC1DC39173EB8130057BC7F /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,7 +334,6 @@
 			files = (
 				BDFF508516E5D72C009ED9AE /* main.m in Sources */,
 				BDFF508916E5D72C009ED9AE /* LDAppDelegate.m in Sources */,
-				BDFF509216E5D72D009ED9AE /* LDViewController.m in Sources */,
 				BDFF50A016E5E010009ED9AE /* LDCurrencyCell.m in Sources */,
 				BD29686716ECA6BA009D6397 /* LDHeadCell.m in Sources */,
 				BD42A40016EFC9AA002FFF6E /* RTLabel.m in Sources */,
@@ -367,6 +350,7 @@
 				BD80E41A16FA286100CB9ED6 /* ASIInputStream.m in Sources */,
 				BD80E41B16FA286100CB9ED6 /* ASINetworkQueue.m in Sources */,
 				BD80E41C16FA286100CB9ED6 /* Reachability.m in Sources */,
+				BDC1DC35173EB2B10057BC7F /* LDMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,22 +363,6 @@
 				BDFF508216E5D72C009ED9AE /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		BDFF509316E5D72D009ED9AE /* LDViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BDFF509416E5D72D009ED9AE /* en */,
-			);
-			name = LDViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		BDFF509616E5D72D009ED9AE /* LDViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BDFF509716E5D72D009ED9AE /* en */,
-			);
-			name = LDViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
