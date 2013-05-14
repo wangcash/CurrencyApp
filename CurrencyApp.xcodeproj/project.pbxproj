@@ -85,6 +85,7 @@
 		BD84A0EE16FFA38C001BB4D2 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		BD8545EE16FDF7650096D6E7 /* NavBarBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavBarBg.png; sourceTree = "<group>"; };
 		BD8545EF16FDF7650096D6E7 /* NavBarBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavBarBg@2x.png"; sourceTree = "<group>"; };
+		BDBF7899174280B100A92BEC /* LDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDHelper.h; sourceTree = "<group>"; };
 		BDC1DC33173EB2B10057BC7F /* LDMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDMainViewController.h; sourceTree = "<group>"; };
 		BDC1DC34173EB2B10057BC7F /* LDMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDMainViewController.m; sourceTree = "<group>"; };
 		BDC1DC38173EB8130057BC7F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -243,6 +244,7 @@
 				BD29686816ECA6FB009D6397 /* LDHeadCell_iPhone.xib */,
 				BD42A3FE16EFC9AA002FFF6E /* RTLabel.h */,
 				BD42A3FF16EFC9AA002FFF6E /* RTLabel.m */,
+				BDBF7899174280B100A92BEC /* LDHelper.h */,
 				BDFF507F16E5D72C009ED9AE /* Supporting Files */,
 				BDFF50D216E6498E009ED9AE /* CurrencyKeys.plist */,
 				BDCA395D16F7030C008ACE8B /* InfoPlist.strings */,
