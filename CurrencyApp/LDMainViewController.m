@@ -143,7 +143,7 @@
         
         self.ratesDictionary = [self.ratesDict objectForKey:@"rates"];
         [self setValue:[self.ratesDict objectForKey:@"updateDateTime"] forKey:@"updateTimeString"];
-        //        self.updateTimeString = [dict objectForKey:@"updateDateTime"];
+//        self.updateTimeString = [self.ratesDict objectForKey:@"updateDateTime"];
         
         dispatch_async(dispatch_get_main_queue(), ^{
           [self.contentView reloadData];
