@@ -79,12 +79,11 @@
     self.curKeysArray = plistArray;
     
     self.navBar = [[[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)] autorelease];
+//    self.tabBar = [[[UITabBar alloc] initWithFrame:CGRectMake(0, 460+(iPhone5?88:0)-44, 320, 44)] autorelease];
     
-//    NSLog(@"%f, %@", self.view.frame.size.height-44, NSStringFromCGRect(self.view.frame));
-    
-//    CGFloat f = self.view.frame.size.height-44;
-    
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, 320, 504) style:UITableViewStylePlain];
+    CGFloat navBarHeight = self.navBar ? self.navBar.frame.size.height : 0.0f;
+    CGFloat tabBarHeight = self.tabBar ? self.tabBar.frame.size.height : 0.0f;
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, navBarHeight, 320, 460+(iPhone5?88:0)-navBarHeight-tabBarHeight) style:UITableViewStylePlain];
     [tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [tableView setDataSource:self];
     [tableView setDelegate:self];
@@ -104,6 +103,10 @@
   
   if (self.navBar) {
     [self.view addSubview:self.navBar];
+  }
+  
+  if (self.tabBar) {
+    [self.view addSubview:self.tabBar];
   }
   
   if (self.contentView) {
