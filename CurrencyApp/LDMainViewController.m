@@ -42,7 +42,7 @@
     [tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [tableView setDataSource:self];
     [tableView setDelegate:self];
-    [tableView setBackgroundColor:RGBA(220, 211, 204, 1.0)];
+    [tableView setBackgroundColor:RGB(220, 211, 204)];
     self.contentView = tableView;
     [tableView release];
     
