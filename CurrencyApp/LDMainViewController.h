@@ -23,7 +23,7 @@
 @property (nonatomic, retain) NSString      *updateTimeString;
 
 @property (nonatomic, retain) UINavigationBar *navBar;
-@property (nonatomic, retain) UITabBar        *tabBar;
+@property (nonatomic, retain) UIToolbar       *toolBar;
 @property (nonatomic, retain) UITableView     *contentView;
 @property (nonatomic, retain) UIView          *topView;
 
