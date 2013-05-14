@@ -214,25 +214,13 @@
   static NSString *LDCurrencyCellIdentifier = @"LDCurrencyCellIdentifier";
   static NSString *LDHeadCellIdentifier = @"LDHeadCellIdentifier";
   
-  static BOOL nibsRegistered = NO;
-  if (!nibsRegistered) {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-      [tableView registerNib:[UINib nibWithNibName:@"LDHeadCell_iPhone" bundle:nil]
-      forCellReuseIdentifier:LDHeadCellIdentifier];
-    } else {
-      [tableView registerNib:[UINib nibWithNibName:@"LDHeadCell_iPad" bundle:nil]
-      forCellReuseIdentifier:LDHeadCellIdentifier];
-    }
-    nibsRegistered = YES;
-  }
-  
   UITableViewCell *cell;
   
   if (indexPath.row == 0) {
     cell = [tableView dequeueReusableCellWithIdentifier:LDHeadCellIdentifier];
     if (cell == nil) {
-      cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                     reuseIdentifier:LDHeadCellIdentifier] autorelease];
+      cell = [[[LDHeadCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                reuseIdentifier:LDHeadCellIdentifier] autorelease];
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
   }

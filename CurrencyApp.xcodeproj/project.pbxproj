@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BD29686716ECA6BA009D6397 /* LDHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD29686616ECA6BA009D6397 /* LDHeadCell.m */; };
-		BD29686916ECA6FB009D6397 /* LDHeadCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD29686816ECA6FB009D6397 /* LDHeadCell_iPhone.xib */; };
 		BD42A3FB16EFBDD6002FFF6E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD42A3FA16EFBDD6002FFF6E /* CoreText.framework */; };
 		BD42A40016EFC9AA002FFF6E /* RTLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD42A3FF16EFC9AA002FFF6E /* RTLabel.m */; };
 		BD80E3F516FA254A00CB9ED6 /* LDNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BD80E3F416FA254A00CB9ED6 /* LDNavigationBar.m */; };
@@ -48,7 +47,6 @@
 /* Begin PBXFileReference section */
 		BD29686516ECA6BA009D6397 /* LDHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDHeadCell.h; sourceTree = "<group>"; };
 		BD29686616ECA6BA009D6397 /* LDHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDHeadCell.m; sourceTree = "<group>"; };
-		BD29686816ECA6FB009D6397 /* LDHeadCell_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDHeadCell_iPhone.xib; sourceTree = "<group>"; };
 		BD42A3FA16EFBDD6002FFF6E /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		BD42A3FC16EFBE13002FFF6E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BD42A3FE16EFC9AA002FFF6E /* RTLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLabel.h; sourceTree = "<group>"; };
@@ -241,7 +239,6 @@
 				BDFF509F16E5E010009ED9AE /* LDCurrencyCell.m */,
 				BD29686516ECA6BA009D6397 /* LDHeadCell.h */,
 				BD29686616ECA6BA009D6397 /* LDHeadCell.m */,
-				BD29686816ECA6FB009D6397 /* LDHeadCell_iPhone.xib */,
 				BD42A3FE16EFC9AA002FFF6E /* RTLabel.h */,
 				BD42A3FF16EFC9AA002FFF6E /* RTLabel.m */,
 				BDBF7899174280B100A92BEC /* LDHelper.h */,
@@ -317,7 +314,6 @@
 			files = (
 				BDFF508316E5D72C009ED9AE /* InfoPlist.strings in Resources */,
 				BDFF50D316E6498E009ED9AE /* CurrencyKeys.plist in Resources */,
-				BD29686916ECA6FB009D6397 /* LDHeadCell_iPhone.xib in Resources */,
 				BDCA395E16F7030C008ACE8B /* InfoPlist.strings in Resources */,
 				BD8545F216FDF7650096D6E7 /* NavBarBg.png in Resources */,
 				BD8545F316FDF7650096D6E7 /* NavBarBg@2x.png in Resources */,
