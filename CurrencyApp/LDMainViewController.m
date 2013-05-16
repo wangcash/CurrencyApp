@@ -10,10 +10,6 @@
 #import "LDHeadCell.h"
 #import "LDCurrencyCell.h"
 #import "LDNavigationBar.h"
-#import "ASIHTTPRequest.h"
-#import "JSONKit.h"
-#import "LDHelper.h"
-#import "LoggerClient.h"
 
 @interface LDMainViewController ()
 
@@ -46,8 +42,21 @@
     self.contentView = tableView;
     [tableView release];
     
+    UILabel *labelTop = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
+    labelTop.textColor = [UIColor whiteColor];
+    labelTop.backgroundColor = [UIColor grayColor];
+    labelTop.textAlignment = NSTextAlignmentCenter;
+    labelTop.font = [UIFont fontWithName:@"Verdana" size:[UIFont systemFontSize]];
+    self.topLabel= labelTop;
+    [labelTop release];
+    
   }
   return self;
+}
+
+- (void)dealloc
+{
+  [super dealloc];
 }
 
 - (void)viewDidLoad
@@ -97,20 +106,7 @@
   //  [view addSubview:headerButton];
   //  [headerButton release];
   
-  UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
-  [view setBackgroundColor:[UIColor grayColor]];
-  
-  UILabel *labelTop = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
-  labelTop.textColor = [UIColor whiteColor];
-  labelTop.backgroundColor = [UIColor clearColor];
-  labelTop.textAlignment = NSTextAlignmentCenter;
-  labelTop.font = [UIFont fontWithName:@"Verdana" size:[UIFont systemFontSize]];
-  labelTop.text = @"Updated 10 Apr 2013 04:59:00 GMT";
-  [view addSubview:labelTop];
-  [labelTop release];
-  
-  self.topView = view;
-  [view release];
+
   
   /* GCD方式实现 */
   [self refreshInBackground];
@@ -121,7 +117,6 @@
 {
   [super didReceiveMemoryWarning];
 }
-
 
 /**
  * 更新数据并发出重绘tableview消息
@@ -143,8 +138,6 @@
         
         self.ratesDictionary = [self.ratesDict objectForKey:@"rates"];
         [self setValue:[self.ratesDict objectForKey:@"updateDateTime"] forKey:@"updateTimeString"];
-        NSLog(@"%@", [self.ratesDict objectForKey:@"updateDateTime"]);
-//        self.updateTimeString = [self.ratesDict objectForKey:@"updateDateTime"];
         
         dispatch_async(dispatch_get_main_queue(), ^{
           [self.contentView reloadData];
@@ -187,12 +180,25 @@
   if (self.topView) {
     return self.topView.frame.size.height;
   }
-  return 0;
+  else {
+    return self.topLabel.frame.size.height;
+  }
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-  return self.topView;
+  if (self.topView) {
+    return self.topView;
+  }
+  else {
+    if (self.updateTimeString) {
+      self.topLabel.text = [NSString stringWithFormat:@"Updated %@ GMT", self.updateTimeString];
+    }
+    else {
+      self.topLabel.text = @"Updating...";
+    }
+    return self.topLabel;
+  }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
