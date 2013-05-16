@@ -32,76 +32,59 @@
     view = [[UIView alloc] initWithFrame:CGRectMake(5, 0, 310, 60)];
     view.backgroundColor = [UIColor whiteColor];
     [self.contentView addSubview:view];
-    [view release];
-    view = nil;
+    [view release], view = nil;
     
     view = [[UIView alloc] initWithFrame:CGRectMake(5, 30, 95, 30)];
     view.backgroundColor = RGB(238, 233, 230);
     [self.contentView addSubview:view];
-    [view release];
-    view = nil;
+    [view release], view = nil;
     
     view = [[UIView alloc] initWithFrame:CGRectMake(101, 30, 103, 30)];
     view.backgroundColor = RGB(238, 233, 230);
     [self.contentView addSubview:view];
-    [view release];
-    view = nil;
+    [view release], view = nil;
     
     view = [[UIView alloc] initWithFrame:CGRectMake(205, 30, 110, 30)];
     view.backgroundColor = RGB(238, 233, 230);
     [self.contentView addSubview:view];
-    [view release];
-    view = nil;
+    [view release], view = nil;
     
     // 覆盖label
-    self.currencyLabel = [[RTLabel alloc] initWithFrame:CGRectMake(7, 5, 95, 21)];
-    [self.currencyLabel setTextAlignment:RTTextAlignmentLeft];
-    [self.contentView addSubview:self.currencyLabel];
-    [self.currencyLabel release];
+    _currencyLabel = [[RTLabel alloc] initWithFrame:CGRectMake(7, 5, 95, 21)];
+    [_currencyLabel setTextAlignment:RTTextAlignmentLeft];
+    [self.contentView addSubview:_currencyLabel];
     
-    self.bidLabel = [[RTLabel alloc] initWithFrame:CGRectMake(96, 2, 103, 25)];
-    [self.bidLabel setTextAlignment:RTTextAlignmentRight];
-    [self.contentView addSubview:self.bidLabel];
-    [self.bidLabel release];
+    _bidLabel = [[RTLabel alloc] initWithFrame:CGRectMake(96, 2, 103, 25)];
+    [_bidLabel setTextAlignment:RTTextAlignmentRight];
+    [self.contentView addSubview:_bidLabel];
     
-    self.offerLabel = [[RTLabel alloc] initWithFrame:CGRectMake(200, 2, 110, 25)];
-    [self.offerLabel setTextAlignment:RTTextAlignmentRight];
-    [self.contentView addSubview:self.offerLabel];
-    [self.offerLabel release];
+    _offerLabel = [[RTLabel alloc] initWithFrame:CGRectMake(200, 2, 110, 25)];
+    [_offerLabel setTextAlignment:RTTextAlignmentRight];
+    [self.contentView addSubview:_offerLabel];
     
-    self.changeLabel = [[RTLabel alloc] initWithFrame:CGRectMake(7, 35, 95, 21)];
-    [self.changeLabel setTextAlignment:RTTextAlignmentLeft];
-    [self.contentView addSubview:self.changeLabel];
-    [self.changeLabel release];
+    _changeLabel = [[RTLabel alloc] initWithFrame:CGRectMake(7, 35, 95, 21)];
+    [_changeLabel setTextAlignment:RTTextAlignmentLeft];
+    [self.contentView addSubview:_changeLabel];
     
-    self.lowLabel = [[RTLabel alloc] initWithFrame:CGRectMake(96, 32, 103, 25)];
-    [self.lowLabel setTextAlignment:RTTextAlignmentRight];
-    [self.contentView addSubview:self.lowLabel];
-    [self.lowLabel release];
+    _lowLabel = [[RTLabel alloc] initWithFrame:CGRectMake(96, 32, 103, 25)];
+    [_lowLabel setTextAlignment:RTTextAlignmentRight];
+    [self.contentView addSubview:_lowLabel];
     
-    self.highLabel = [[RTLabel alloc] initWithFrame:CGRectMake(200, 32, 110, 25)];
-    [self.highLabel setTextAlignment:RTTextAlignmentRight];
-    [self.contentView addSubview:self.highLabel];
-    [self.highLabel release];
+    _highLabel = [[RTLabel alloc] initWithFrame:CGRectMake(200, 32, 110, 25)];
+    [_highLabel setTextAlignment:RTTextAlignmentRight];
+    [self.contentView addSubview:_highLabel];
   }
   return self;
 }
 
 - (void)dealloc
 {
-  self.curKey     = nil;
-  self.curBid     = nil;
-  self.curOffer   = nil;
-  self.curChange  = nil;
-  self.curLow     = nil;
-  self.curHigh    = nil;
-  
-  self.currencyLabel  = nil;
-  self.bidLabel       = nil;
-  self.offerLabel     = nil;
-  self.changeLabel    = nil;
-  self.lowLabel       = nil;
-  self.highLabel      = nil;
+  [_currencyLabel release];
+  [_bidLabel      release];
+  [_offerLabel    release];
+  [_changeLabel   release];
+  [_lowLabel      release];
+  [_highLabel     release];
   
   [super dealloc];
 }

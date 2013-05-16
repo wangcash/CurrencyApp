@@ -8,7 +8,7 @@
 
 #import "LDAppDelegate.h"
 
-#import "LDMainViewController.h"
+#import "LDViewController.h"
 
 @implementation LDAppDelegate
 
@@ -23,8 +23,8 @@
 {
   self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
   
-  self.mainViewController = [[[LDMainViewController alloc] init] autorelease];
-  self.window.rootViewController = self.mainViewController;
+  self.viewController = [[[LDViewController alloc] init] autorelease];
+  self.window.rootViewController = self.viewController;
   
   [self.window makeKeyAndVisible];
   return YES;

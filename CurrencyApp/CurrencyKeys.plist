@@ -12,5 +12,26 @@
 	<string>AUD.USD</string>
 	<string>NZD.USD</string>
 	<string>USD.CAD</string>
+  <string>GBP.JPY</string>
+  <string>EUR.DKK</string>
+  <string>USD.HKD</string>
+  <string>CHF.JPY</string>
+  <string>USD.NOK</string>
+  <string>EUR.SEK</string>
+  <string>USD.MXN</string>
+  <string>GBP.CHF</string>
+  <string>EUR.NOK</string>
+  <string>USD.ZAR</string>
+  <string>AUD.NZD</string>
+  <string>AUD.CAD</string>
+  <string>USD.SGD</string>
+  <string>AUD.JPY</string>
+  <string>EUR.AUD</string>
+  <string>EUR.NZD</string>
+  <string>EUR.CAD</string>
+  <string>USD.RUB</string>
+  <string>GBP.CAD</string>
+  <string>GBP.AUD</string>
+  <string>USD.SEK</string>
 </array>
 </plist>
