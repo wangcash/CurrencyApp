@@ -14,6 +14,7 @@ PODS:
   - MBProgressHUD (0.6)
   - NSLogger (1.1)
   - Reachability (3.1.0)
+  - RTLabel (1.0)
 
 DEPENDENCIES:
   - ASIHTTPRequest
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - MBProgressHUD
   - NSLogger
   - Reachability
+  - RTLabel
 
 SPEC CHECKSUMS:
   ASIHTTPRequest: a411b8d0f006ed8fc24248be6a0c4ad2abc9b101
@@ -28,5 +30,6 @@ SPEC CHECKSUMS:
   MBProgressHUD: 9b55a90566fb5d07df0602f6fd9fa04510ad5d52
   NSLogger: 4567fef08d0db18a89cce91b2053823fc0950738
   Reachability: ba94ecd4eaa037be3d0588b38956672588530c5b
+  RTLabel: 124420c05d7897bf7f14b75a26f54f2932ac4ca5
 
 COCOAPODS: 0.19.1

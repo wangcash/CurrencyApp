@@ -10,7 +10,6 @@
 		16F0BEE3FDF14806AC454839 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DE1EDCF0A9430699DC95EA /* libPods.a */; };
 		BD29686716ECA6BA009D6397 /* LDHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD29686616ECA6BA009D6397 /* LDHeadCell.m */; };
 		BD42A3FB16EFBDD6002FFF6E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD42A3FA16EFBDD6002FFF6E /* CoreText.framework */; };
-		BD42A40016EFC9AA002FFF6E /* RTLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD42A3FF16EFC9AA002FFF6E /* RTLabel.m */; };
 		BD80E3F516FA254A00CB9ED6 /* LDNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BD80E3F416FA254A00CB9ED6 /* LDNavigationBar.m */; };
 		BD84A0EF16FFA38C001BB4D2 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BD84A0ED16FFA38C001BB4D2 /* Icon.png */; };
 		BD84A0F016FFA38C001BB4D2 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD84A0EE16FFA38C001BB4D2 /* Icon@2x.png */; };
@@ -41,8 +40,6 @@
 		BD29686616ECA6BA009D6397 /* LDHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDHeadCell.m; sourceTree = "<group>"; };
 		BD42A3FA16EFBDD6002FFF6E /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		BD42A3FC16EFBE13002FFF6E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		BD42A3FE16EFC9AA002FFF6E /* RTLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLabel.h; sourceTree = "<group>"; };
-		BD42A3FF16EFC9AA002FFF6E /* RTLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLabel.m; sourceTree = "<group>"; };
 		BD80E3F316FA254A00CB9ED6 /* LDNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDNavigationBar.h; sourceTree = "<group>"; };
 		BD80E3F416FA254A00CB9ED6 /* LDNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDNavigationBar.m; sourceTree = "<group>"; };
 		BD84A0ED16FFA38C001BB4D2 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -158,8 +155,6 @@
 				BDFF509F16E5E010009ED9AE /* LDCurrencyCell.m */,
 				BD29686516ECA6BA009D6397 /* LDHeadCell.h */,
 				BD29686616ECA6BA009D6397 /* LDHeadCell.m */,
-				BD42A3FE16EFC9AA002FFF6E /* RTLabel.h */,
-				BD42A3FF16EFC9AA002FFF6E /* RTLabel.m */,
 				BDBF7899174280B100A92BEC /* LDHelper.h */,
 				BDFF507F16E5D72C009ED9AE /* Supporting Files */,
 				BDFF50D216E6498E009ED9AE /* CurrencyKeys.plist */,
@@ -286,7 +281,6 @@
 				BDFF508916E5D72C009ED9AE /* LDAppDelegate.m in Sources */,
 				BDFF50A016E5E010009ED9AE /* LDCurrencyCell.m in Sources */,
 				BD29686716ECA6BA009D6397 /* LDHeadCell.m in Sources */,
-				BD42A40016EFC9AA002FFF6E /* RTLabel.m in Sources */,
 				BDCA396116F9876A008ACE8B /* UINavigationBar+Customized.m in Sources */,
 				BD80E3F516FA254A00CB9ED6 /* LDNavigationBar.m in Sources */,
 				BDC1DC35173EB2B10057BC7F /* LDViewController.m in Sources */,

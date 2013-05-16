@@ -1,8 +1,8 @@
 ALWAYS_SEARCH_USER_PATHS = YES
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = ${PODS_HEADERS_SEARCH_PATHS} $(SDKROOT)/usr/include/libxml2
-OTHER_LDFLAGS = -ObjC -lxml2.2 -lz.1 -framework CFNetwork -framework CoreGraphics -framework MobileCoreServices -framework SystemConfiguration
-PODS_BUILD_HEADERS_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/ASIHTTPRequest" "${PODS_ROOT}/BuildHeaders/JSONKit" "${PODS_ROOT}/BuildHeaders/MBProgressHUD" "${PODS_ROOT}/BuildHeaders/NSLogger" "${PODS_ROOT}/BuildHeaders/Reachability"
+OTHER_LDFLAGS = -ObjC -lxml2.2 -lz.1 -framework CFNetwork -framework CoreGraphics -framework CoreText -framework MobileCoreServices -framework SystemConfiguration
+PODS_BUILD_HEADERS_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/ASIHTTPRequest" "${PODS_ROOT}/BuildHeaders/JSONKit" "${PODS_ROOT}/BuildHeaders/MBProgressHUD" "${PODS_ROOT}/BuildHeaders/NSLogger" "${PODS_ROOT}/BuildHeaders/RTLabel" "${PODS_ROOT}/BuildHeaders/Reachability"
 PODS_HEADERS_SEARCH_PATHS = ${PODS_PUBLIC_HEADERS_SEARCH_PATHS}
-PODS_PUBLIC_HEADERS_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/ASIHTTPRequest" "${PODS_ROOT}/Headers/JSONKit" "${PODS_ROOT}/Headers/MBProgressHUD" "${PODS_ROOT}/Headers/NSLogger" "${PODS_ROOT}/Headers/Reachability"
+PODS_PUBLIC_HEADERS_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/ASIHTTPRequest" "${PODS_ROOT}/Headers/JSONKit" "${PODS_ROOT}/Headers/MBProgressHUD" "${PODS_ROOT}/Headers/NSLogger" "${PODS_ROOT}/Headers/RTLabel" "${PODS_ROOT}/Headers/Reachability"
 PODS_ROOT = ${SRCROOT}/Pods
