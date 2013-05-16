@@ -22,6 +22,7 @@
       currency.text = @"CURRENCY";
       currency.textAlignment = NSTextAlignmentLeft;
       [self addSubview:currency];
+      [currency release];
       
       UILabel *bid = [[UILabel alloc] initWithFrame:CGRectMake(100, 8, 105, 32)];
       bid.font = [UIFont fontWithName:@"Verdana-Bold" size:15];
@@ -30,6 +31,7 @@
       bid.text = @"BID";
       bid.textAlignment = NSTextAlignmentRight;
       [self addSubview:bid];
+      [bid release];
       
       UILabel *offer = [[UILabel alloc] initWithFrame:CGRectMake(205, 8, 110, 32)];
       offer.font = [UIFont fontWithName:@"Verdana-Bold" size:15];
@@ -38,7 +40,7 @@
       offer.text = @"OFFER";
       offer.textAlignment = NSTextAlignmentRight;
       [self addSubview:offer];
-      
+      [offer release];
     }
     return self;
 }
