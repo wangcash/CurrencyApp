@@ -77,40 +77,8 @@
     [self.view addSubview:self.contentView];
   }
   
-  //  UIButton *titleButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
-  //  [titleButton addTarget:self action:@selector(linkLdport:) forControlEvents:UIControlEventTouchUpInside];
-  //  self.navBar.topItem.titleView = titleButton;
-  //  [titleButton release];
-  
-  //  UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
-  //  [view setBackgroundColor:[UIColor grayColor]];
-  //
-  //  UILabel *labelTop = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
-  //  labelTop.textColor = [UIColor whiteColor];
-  //  labelTop.backgroundColor = [UIColor clearColor];
-  //  labelTop.textAlignment = NSTextAlignmentCenter;
-  //  labelTop.text = @"总行交易员的外汇知识和交易技巧";
-  //  [view addSubview:labelTop];
-  //  [labelTop release];
-  //
-  //  UILabel *labelBottom = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, 320, 20)];
-  //  labelBottom.textColor = [UIColor whiteColor];
-  //  labelBottom.backgroundColor = [UIColor clearColor];
-  //  labelBottom.textAlignment = NSTextAlignmentCenter;
-  //  labelBottom.text = @"立体式思维解析外汇市场";
-  //  [view addSubview:labelBottom];
-  //  [labelBottom release];
-  
-  //  UIButton *headerButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
-  //  [headerButton addTarget:self action:@selector(linkLdport:) forControlEvents:UIControlEventTouchUpInside];
-  //  [view addSubview:headerButton];
-  //  [headerButton release];
-  
-
-  
   /* GCD方式实现 */
   [self refreshInBackground];
-  
 }
 
 - (void)didReceiveMemoryWarning
@@ -250,16 +218,6 @@
   }
   
   return cell;
-}
-
-- (void)linkLdport:(id)sender
-{
-  [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.ldport.com/"]];
-}
-
-- (IBAction)linkAnalyse:(id)sender
-{
-  [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.ldport.com/plus/list.php?tid=132"]];
 }
 
 @end

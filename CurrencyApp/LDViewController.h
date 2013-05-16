@@ -33,8 +33,4 @@
 @property (nonatomic, retain) UIView          *topView;
 @property (nonatomic, retain) UILabel         *topLabel;
 
-- (IBAction)linkLdport:(id)sender;
-
-- (IBAction)linkAnalyse:(id)sender;
-
 @end
