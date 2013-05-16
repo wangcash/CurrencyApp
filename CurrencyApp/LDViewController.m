@@ -27,35 +27,38 @@
     NSBundle *bundle = [NSBundle mainBundle];
     NSURL *plistURL = [bundle URLForResource:@"CurrencyKeys" withExtension:@"plist"];
     NSArray *plistArray = [NSArray arrayWithContentsOfURL:plistURL];
-    self.curKeysArray = plistArray;
+    _curKeysArray = [plistArray retain];
     
-    self.navBar = [[[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)] autorelease];
-    self.toolBar = [[[UIToolbar alloc] initWithFrame:CGRectMake(0, 460+(iPhone5?88:0)-44, 320, 44)] autorelease];
+    _navBar  = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    _toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 460+(iPhone5?88:0)-44, 320, 44)];
     
-    CGFloat navBarHeight = self.navBar ? self.navBar.frame.size.height : 0.0f;
-    CGFloat toolBarHeight = self.toolBar ? self.toolBar.frame.size.height : 0.0f;
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, navBarHeight, 320, 460+(iPhone5?88:0)-navBarHeight-toolBarHeight) style:UITableViewStylePlain];
-    [tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    [tableView setDataSource:self];
-    [tableView setDelegate:self];
-    [tableView setBackgroundColor:RGB(220, 211, 204)];
-    self.contentView = tableView;
-    [tableView release];
+    CGFloat navBarHeight  = _navBar  ? _navBar.frame.size.height  : 0.0f;
+    CGFloat toolBarHeight = _toolBar ? _toolBar.frame.size.height : 0.0f;
+    _contentView = [[UITableView alloc] initWithFrame:CGRectMake(0, navBarHeight, 320, 460+(iPhone5?88:0)-navBarHeight-toolBarHeight)
+                                                style:UITableViewStylePlain];
+    _contentView.separatorStyle  = UITableViewCellSeparatorStyleNone;
+    _contentView.dataSource      = self;
+    _contentView.delegate        = self;
+    _contentView.backgroundColor = RGB(220, 211, 204);
     
-    UILabel *labelTop = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
-    labelTop.textColor = [UIColor whiteColor];
-    labelTop.backgroundColor = [UIColor grayColor];
-    labelTop.textAlignment = NSTextAlignmentCenter;
-    labelTop.font = [UIFont fontWithName:@"Verdana" size:[UIFont systemFontSize]];
-    self.topLabel= labelTop;
-    [labelTop release];
-    
+    _topLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
+    _topLabel.textColor       = [UIColor whiteColor];
+    _topLabel.backgroundColor = [UIColor grayColor];
+    _topLabel.textAlignment   = NSTextAlignmentCenter;
+    _topLabel.font            = [UIFont fontWithName:@"Verdana" size:[UIFont systemFontSize]];
+
   }
   return self;
 }
 
 - (void)dealloc
 {
+  [_curKeysArray release];
+  
+  [_navBar release];
+  [_toolBar release];
+  [_contentView release];
+  [_topLabel release];
   [super dealloc];
 }
 
