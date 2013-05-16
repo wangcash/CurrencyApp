@@ -9,13 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @class LDViewController;
-@class LDMainViewController;
 
 @interface LDAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) LDViewController *viewController;
-@property (strong, nonatomic) LDMainViewController *mainViewController;
 
 @end

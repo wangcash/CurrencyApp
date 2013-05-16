@@ -6,18 +6,18 @@
 //  Copyright (c) 2013年 LYFORD INTERNATIONAL TRADING PORT PTY.LTD. All rights reserved.
 //
 
-#import "LDMainViewController.h"
+#import "LDViewController.h"
 #import "LDHeadCell.h"
 #import "LDCurrencyCell.h"
 #import "LDNavigationBar.h"
 
-@interface LDMainViewController ()
+@interface LDViewController ()
 
 
 
 @end
 
-@implementation LDMainViewController
+@implementation LDViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

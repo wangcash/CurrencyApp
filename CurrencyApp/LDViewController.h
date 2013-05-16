@@ -18,7 +18,7 @@
 #define kLDFxall_TopRates_Url  @"http://www.fxall.com/web-rateticker/topRates"
 #define kLDRefresh_Interval    3
 
-@interface LDMainViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate,MBProgressHUDDelegate>
+@interface LDViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate,MBProgressHUDDelegate>
 
 @property (nonatomic, retain) NSArray       *curKeysArray;
 @property (nonatomic, retain) NSDictionary  *ratesDict;
