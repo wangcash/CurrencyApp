@@ -13,6 +13,7 @@
 #import "ASIHTTPRequest.h"
 #import "JSONKit.h"
 #import "LDHelper.h"
+#import "LoggerClient.h"
 
 @interface LDMainViewController ()
 
@@ -142,6 +143,7 @@
         
         self.ratesDictionary = [self.ratesDict objectForKey:@"rates"];
         [self setValue:[self.ratesDict objectForKey:@"updateDateTime"] forKey:@"updateTimeString"];
+        NSLog(@"%@", [self.ratesDict objectForKey:@"updateDateTime"]);
 //        self.updateTimeString = [self.ratesDict objectForKey:@"updateDateTime"];
         
         dispatch_async(dispatch_get_main_queue(), ^{
