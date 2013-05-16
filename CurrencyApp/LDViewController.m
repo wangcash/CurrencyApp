@@ -30,7 +30,10 @@
     _curKeysArray = [plistArray retain];
     
     _navBar  = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
-    _toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 460+(iPhone5?88:0)-44, 320, 44)];
+    UINavigationItem *item = [[UINavigationItem alloc] initWithTitle:@"FX rates"];
+    [_navBar setItems:@[item]];
+    
+//    _toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 460+(iPhone5?88:0)-44, 320, 44)];
     
     CGFloat navBarHeight  = _navBar  ? _navBar.frame.size.height  : 0.0f;
     CGFloat toolBarHeight = _toolBar ? _toolBar.frame.size.height : 0.0f;
@@ -108,7 +111,7 @@
         self.ratesDict = [[request responseString] objectFromJSONString];
         
         self.ratesDictionary = [self.ratesDict objectForKey:@"rates"];
-        [self setValue:[self.ratesDict objectForKey:@"updateDateTime"] forKey:@"updateTimeString"];
+        self.updateTimeString = [self.ratesDict objectForKey:@"updateDateTime"];
         
         dispatch_async(dispatch_get_main_queue(), ^{
           [self.contentView reloadData];
