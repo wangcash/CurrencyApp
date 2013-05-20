@@ -26,30 +26,12 @@
     //读入CurrencyKyes备用
     NSBundle *bundle = [NSBundle mainBundle];
     NSURL *plistURL = [bundle URLForResource:@"CurrencyKeys" withExtension:@"plist"];
-    NSArray *plistArray = [NSArray arrayWithContentsOfURL:plistURL];
-    _curKeysArray = [plistArray retain];
+    _curKeysArray = [[NSArray alloc] initWithContentsOfURL:plistURL];
     
-    _navBar  = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
     UINavigationItem *item = [[UINavigationItem alloc] initWithTitle:@"FX rates"];
-    [_navBar setItems:@[item]];
-    
-//    _toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 460+(iPhone5?88:0)-44, 320, 44)];
-    
-    CGFloat navBarHeight  = _navBar  ? _navBar.frame.size.height  : 0.0f;
-    CGFloat toolBarHeight = _toolBar ? _toolBar.frame.size.height : 0.0f;
-    _contentView = [[UITableView alloc] initWithFrame:CGRectMake(0, navBarHeight, 320, 460+(iPhone5?88:0)-navBarHeight-toolBarHeight)
-                                                style:UITableViewStylePlain];
-    _contentView.separatorStyle  = UITableViewCellSeparatorStyleNone;
-    _contentView.dataSource      = self;
-    _contentView.delegate        = self;
-    _contentView.backgroundColor = RGB(220, 211, 204);
-    
-    _topLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
-    _topLabel.textColor       = [UIColor whiteColor];
-    _topLabel.backgroundColor = [UIColor grayColor];
-    _topLabel.textAlignment   = NSTextAlignmentCenter;
-    _topLabel.font            = [UIFont fontWithName:@"Verdana" size:[UIFont systemFontSize]];
-
+    _navBar  = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    _navBar.items = @[item];
+    [item release];
   }
   return self;
 }
@@ -60,8 +42,6 @@
   
   [_navBar release];
   [_toolBar release];
-  [_contentView release];
-  [_topLabel release];
   [super dealloc];
 }
 
@@ -71,17 +51,32 @@
   
   [self.view setBackgroundColor:[UIColor grayColor]];
   
+  CGFloat navBarHeight  = 0.0f;
+  CGFloat toolBarHeight = 0.0f;
+  
   if (self.navBar) {
+    navBarHeight = self.navBar.frame.size.height;
     [self.view addSubview:self.navBar];
   }
   
   if (self.toolBar) {
+    toolBarHeight = self.toolBar.frame.size.height;
     [self.view addSubview:self.toolBar];
   }
   
-  if (self.contentView) {
-    [self.view addSubview:self.contentView];
-  }
+  self.contentView = [[[UITableView alloc] initWithFrame:CGRectMake(0, navBarHeight, 320, 460+(iPhone5?88:0)-navBarHeight-toolBarHeight)
+                                                   style:UITableViewStylePlain] autorelease];
+  self.contentView.separatorStyle  = UITableViewCellSeparatorStyleNone;
+  self.contentView.dataSource      = self;
+  self.contentView.delegate        = self;
+  self.contentView.backgroundColor = RGB(220, 211, 204);
+  [self.view addSubview:self.contentView];
+  
+  self.topLabel = [[[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 20)] autorelease];
+  self.topLabel.textColor       = [UIColor whiteColor];
+  self.topLabel.backgroundColor = [UIColor grayColor];
+  self.topLabel.textAlignment   = NSTextAlignmentCenter;
+  self.topLabel.font            = [UIFont fontWithName:@"Verdana" size:[UIFont systemFontSize]];
   
   /* GCD方式实现 */
   [self refreshInBackground];
