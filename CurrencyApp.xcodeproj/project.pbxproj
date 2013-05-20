@@ -13,12 +13,9 @@
 		BD80E3F516FA254A00CB9ED6 /* LDNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BD80E3F416FA254A00CB9ED6 /* LDNavigationBar.m */; };
 		BD84A0EF16FFA38C001BB4D2 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BD84A0ED16FFA38C001BB4D2 /* Icon.png */; };
 		BD84A0F016FFA38C001BB4D2 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD84A0EE16FFA38C001BB4D2 /* Icon@2x.png */; };
-		BD8545F216FDF7650096D6E7 /* NavBarBg.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8545EE16FDF7650096D6E7 /* NavBarBg.png */; };
-		BD8545F316FDF7650096D6E7 /* NavBarBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8545EF16FDF7650096D6E7 /* NavBarBg@2x.png */; };
 		BDC1DC35173EB2B10057BC7F /* LDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC1DC34173EB2B10057BC7F /* LDViewController.m */; };
 		BDC1DC39173EB8130057BC7F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDC1DC38173EB8130057BC7F /* Default-568h@2x.png */; };
 		BDCA395E16F7030C008ACE8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDCA395D16F7030C008ACE8B /* InfoPlist.strings */; };
-		BDCA396116F9876A008ACE8B /* UINavigationBar+Customized.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCA396016F9876A008ACE8B /* UINavigationBar+Customized.m */; };
 		BDFF507916E5D72C009ED9AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFF507816E5D72C009ED9AE /* UIKit.framework */; };
 		BDFF507B16E5D72C009ED9AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFF507A16E5D72C009ED9AE /* Foundation.framework */; };
 		BDFF507D16E5D72C009ED9AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFF507C16E5D72C009ED9AE /* CoreGraphics.framework */; };
@@ -44,15 +41,11 @@
 		BD80E3F416FA254A00CB9ED6 /* LDNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDNavigationBar.m; sourceTree = "<group>"; };
 		BD84A0ED16FFA38C001BB4D2 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		BD84A0EE16FFA38C001BB4D2 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		BD8545EE16FDF7650096D6E7 /* NavBarBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavBarBg.png; sourceTree = "<group>"; };
-		BD8545EF16FDF7650096D6E7 /* NavBarBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavBarBg@2x.png"; sourceTree = "<group>"; };
 		BDBF7899174280B100A92BEC /* LDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDHelper.h; sourceTree = "<group>"; };
 		BDC1DC33173EB2B10057BC7F /* LDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDViewController.h; sourceTree = "<group>"; };
 		BDC1DC34173EB2B10057BC7F /* LDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDViewController.m; sourceTree = "<group>"; };
 		BDC1DC38173EB8130057BC7F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BDCA395D16F7030C008ACE8B /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
-		BDCA395F16F9876A008ACE8B /* UINavigationBar+Customized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Customized.h"; sourceTree = "<group>"; };
-		BDCA396016F9876A008ACE8B /* UINavigationBar+Customized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Customized.m"; sourceTree = "<group>"; };
 		BDFF507516E5D72C009ED9AE /* CurrencyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDFF507816E5D72C009ED9AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BDFF507A16E5D72C009ED9AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,8 +91,6 @@
 				BDC1DC38173EB8130057BC7F /* Default-568h@2x.png */,
 				BD84A0ED16FFA38C001BB4D2 /* Icon.png */,
 				BD84A0EE16FFA38C001BB4D2 /* Icon@2x.png */,
-				BD8545EE16FDF7650096D6E7 /* NavBarBg.png */,
-				BD8545EF16FDF7650096D6E7 /* NavBarBg@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -145,8 +136,6 @@
 				BD8545EB16FDF7650096D6E7 /* Resources */,
 				BD80E3F316FA254A00CB9ED6 /* LDNavigationBar.h */,
 				BD80E3F416FA254A00CB9ED6 /* LDNavigationBar.m */,
-				BDCA395F16F9876A008ACE8B /* UINavigationBar+Customized.h */,
-				BDCA396016F9876A008ACE8B /* UINavigationBar+Customized.m */,
 				BDFF508716E5D72C009ED9AE /* LDAppDelegate.h */,
 				BDFF508816E5D72C009ED9AE /* LDAppDelegate.m */,
 				BDC1DC33173EB2B10057BC7F /* LDViewController.h */,
@@ -231,8 +220,6 @@
 				BDFF508316E5D72C009ED9AE /* InfoPlist.strings in Resources */,
 				BDFF50D316E6498E009ED9AE /* CurrencyKeys.plist in Resources */,
 				BDCA395E16F7030C008ACE8B /* InfoPlist.strings in Resources */,
-				BD8545F216FDF7650096D6E7 /* NavBarBg.png in Resources */,
-				BD8545F316FDF7650096D6E7 /* NavBarBg@2x.png in Resources */,
 				BD84A0EF16FFA38C001BB4D2 /* Icon.png in Resources */,
 				BD84A0F016FFA38C001BB4D2 /* Icon@2x.png in Resources */,
 				BDC1DC39173EB8130057BC7F /* Default-568h@2x.png in Resources */,
@@ -281,7 +268,6 @@
 				BDFF508916E5D72C009ED9AE /* LDAppDelegate.m in Sources */,
 				BDFF50A016E5E010009ED9AE /* LDCurrencyCell.m in Sources */,
 				BD29686716ECA6BA009D6397 /* LDHeadCell.m in Sources */,
-				BDCA396116F9876A008ACE8B /* UINavigationBar+Customized.m in Sources */,
 				BD80E3F516FA254A00CB9ED6 /* LDNavigationBar.m in Sources */,
 				BDC1DC35173EB2B10057BC7F /* LDViewController.m in Sources */,
 			);
