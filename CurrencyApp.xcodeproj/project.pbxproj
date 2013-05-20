@@ -13,6 +13,10 @@
 		BD80E3F516FA254A00CB9ED6 /* LDNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BD80E3F416FA254A00CB9ED6 /* LDNavigationBar.m */; };
 		BD84A0EF16FFA38C001BB4D2 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BD84A0ED16FFA38C001BB4D2 /* Icon.png */; };
 		BD84A0F016FFA38C001BB4D2 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD84A0EE16FFA38C001BB4D2 /* Icon@2x.png */; };
+		BD8B5ACF174AAA5D00EF82A0 /* NavBarBg.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8B5ACD174AAA5D00EF82A0 /* NavBarBg.png */; };
+		BD8B5AD0174AAA5D00EF82A0 /* NavBarBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8B5ACE174AAA5D00EF82A0 /* NavBarBg@2x.png */; };
+		BD8B5AD3174AB11D00EF82A0 /* LDViewController+AD.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B5AD2174AB11D00EF82A0 /* LDViewController+AD.m */; };
+		BD8B5AD6174AB15C00EF82A0 /* UINavigationBar+AD.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B5AD5174AB15C00EF82A0 /* UINavigationBar+AD.m */; };
 		BDC1DC35173EB2B10057BC7F /* LDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC1DC34173EB2B10057BC7F /* LDViewController.m */; };
 		BDC1DC39173EB8130057BC7F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDC1DC38173EB8130057BC7F /* Default-568h@2x.png */; };
 		BDCA395E16F7030C008ACE8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDCA395D16F7030C008ACE8B /* InfoPlist.strings */; };
@@ -41,6 +45,12 @@
 		BD80E3F416FA254A00CB9ED6 /* LDNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDNavigationBar.m; sourceTree = "<group>"; };
 		BD84A0ED16FFA38C001BB4D2 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		BD84A0EE16FFA38C001BB4D2 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		BD8B5ACD174AAA5D00EF82A0 /* NavBarBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavBarBg.png; sourceTree = "<group>"; };
+		BD8B5ACE174AAA5D00EF82A0 /* NavBarBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavBarBg@2x.png"; sourceTree = "<group>"; };
+		BD8B5AD1174AB11D00EF82A0 /* LDViewController+AD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LDViewController+AD.h"; sourceTree = "<group>"; };
+		BD8B5AD2174AB11D00EF82A0 /* LDViewController+AD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LDViewController+AD.m"; sourceTree = "<group>"; };
+		BD8B5AD4174AB15C00EF82A0 /* UINavigationBar+AD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+AD.h"; sourceTree = "<group>"; };
+		BD8B5AD5174AB15C00EF82A0 /* UINavigationBar+AD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+AD.m"; sourceTree = "<group>"; };
 		BDBF7899174280B100A92BEC /* LDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDHelper.h; sourceTree = "<group>"; };
 		BDC1DC33173EB2B10057BC7F /* LDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDViewController.h; sourceTree = "<group>"; };
 		BDC1DC34173EB2B10057BC7F /* LDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDViewController.m; sourceTree = "<group>"; };
@@ -95,6 +105,19 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		BD8B5AC9174AA9E200EF82A0 /* AD */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B5AD1174AB11D00EF82A0 /* LDViewController+AD.h */,
+				BD8B5AD2174AB11D00EF82A0 /* LDViewController+AD.m */,
+				BD8B5AD4174AB15C00EF82A0 /* UINavigationBar+AD.h */,
+				BD8B5AD5174AB15C00EF82A0 /* UINavigationBar+AD.m */,
+				BD8B5ACD174AAA5D00EF82A0 /* NavBarBg.png */,
+				BD8B5ACE174AAA5D00EF82A0 /* NavBarBg@2x.png */,
+			);
+			name = AD;
+			sourceTree = "<group>";
+		};
 		BDFF506C16E5D72C009ED9AE = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +156,7 @@
 		BDFF507E16E5D72C009ED9AE /* CurrencyApp */ = {
 			isa = PBXGroup;
 			children = (
+				BD8B5AC9174AA9E200EF82A0 /* AD */,
 				BD8545EB16FDF7650096D6E7 /* Resources */,
 				BD80E3F316FA254A00CB9ED6 /* LDNavigationBar.h */,
 				BD80E3F416FA254A00CB9ED6 /* LDNavigationBar.m */,
@@ -223,6 +247,8 @@
 				BD84A0EF16FFA38C001BB4D2 /* Icon.png in Resources */,
 				BD84A0F016FFA38C001BB4D2 /* Icon@2x.png in Resources */,
 				BDC1DC39173EB8130057BC7F /* Default-568h@2x.png in Resources */,
+				BD8B5ACF174AAA5D00EF82A0 /* NavBarBg.png in Resources */,
+				BD8B5AD0174AAA5D00EF82A0 /* NavBarBg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +296,8 @@
 				BD29686716ECA6BA009D6397 /* LDHeadCell.m in Sources */,
 				BD80E3F516FA254A00CB9ED6 /* LDNavigationBar.m in Sources */,
 				BDC1DC35173EB2B10057BC7F /* LDViewController.m in Sources */,
+				BD8B5AD3174AB11D00EF82A0 /* LDViewController+AD.m in Sources */,
+				BD8B5AD6174AB15C00EF82A0 /* UINavigationBar+AD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
