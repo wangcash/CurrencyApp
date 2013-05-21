@@ -11,12 +11,12 @@
 		BD29686716ECA6BA009D6397 /* LDHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD29686616ECA6BA009D6397 /* LDHeadCell.m */; };
 		BD42A3FB16EFBDD6002FFF6E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD42A3FA16EFBDD6002FFF6E /* CoreText.framework */; };
 		BD80E3F516FA254A00CB9ED6 /* LDNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BD80E3F416FA254A00CB9ED6 /* LDNavigationBar.m */; };
-		BD84A0EF16FFA38C001BB4D2 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BD84A0ED16FFA38C001BB4D2 /* Icon.png */; };
-		BD84A0F016FFA38C001BB4D2 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD84A0EE16FFA38C001BB4D2 /* Icon@2x.png */; };
 		BD8B5ADA174BA5AD00EF82A0 /* NavBarBg.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8B5AD8174BA5AD00EF82A0 /* NavBarBg.png */; };
 		BD8B5ADB174BA5AD00EF82A0 /* NavBarBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8B5AD9174BA5AD00EF82A0 /* NavBarBg@2x.png */; };
 		BD8B5ADE174BA5D800EF82A0 /* UINavigationBar+AD.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B5ADD174BA5D800EF82A0 /* UINavigationBar+AD.m */; };
 		BD8B5AE1174BA6B900EF82A0 /* LDViewController+AD.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B5AE0174BA6B900EF82A0 /* LDViewController+AD.m */; };
+		BD8B5AE4174BA9E500EF82A0 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8B5AE2174BA9E500EF82A0 /* icon.png */; };
+		BD8B5AE5174BA9E500EF82A0 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8B5AE3174BA9E500EF82A0 /* icon@2x.png */; };
 		BDC1DC35173EB2B10057BC7F /* LDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC1DC34173EB2B10057BC7F /* LDViewController.m */; };
 		BDC1DC39173EB8130057BC7F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDC1DC38173EB8130057BC7F /* Default-568h@2x.png */; };
 		BDCA395E16F7030C008ACE8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDCA395D16F7030C008ACE8B /* InfoPlist.strings */; };
@@ -43,14 +43,14 @@
 		BD42A3FC16EFBE13002FFF6E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BD80E3F316FA254A00CB9ED6 /* LDNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDNavigationBar.h; sourceTree = "<group>"; };
 		BD80E3F416FA254A00CB9ED6 /* LDNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDNavigationBar.m; sourceTree = "<group>"; };
-		BD84A0ED16FFA38C001BB4D2 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		BD84A0EE16FFA38C001BB4D2 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		BD8B5AD8174BA5AD00EF82A0 /* NavBarBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavBarBg.png; sourceTree = "<group>"; };
 		BD8B5AD9174BA5AD00EF82A0 /* NavBarBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavBarBg@2x.png"; sourceTree = "<group>"; };
 		BD8B5ADC174BA5D800EF82A0 /* UINavigationBar+AD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+AD.h"; sourceTree = "<group>"; };
 		BD8B5ADD174BA5D800EF82A0 /* UINavigationBar+AD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+AD.m"; sourceTree = "<group>"; };
 		BD8B5ADF174BA6B800EF82A0 /* LDViewController+AD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LDViewController+AD.h"; sourceTree = "<group>"; };
 		BD8B5AE0174BA6B900EF82A0 /* LDViewController+AD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LDViewController+AD.m"; sourceTree = "<group>"; };
+		BD8B5AE2174BA9E500EF82A0 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		BD8B5AE3174BA9E500EF82A0 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		BDBF7899174280B100A92BEC /* LDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDHelper.h; sourceTree = "<group>"; };
 		BDC1DC33173EB2B10057BC7F /* LDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDViewController.h; sourceTree = "<group>"; };
 		BDC1DC34173EB2B10057BC7F /* LDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDViewController.m; sourceTree = "<group>"; };
@@ -99,8 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				BDC1DC38173EB8130057BC7F /* Default-568h@2x.png */,
-				BD84A0ED16FFA38C001BB4D2 /* Icon.png */,
-				BD84A0EE16FFA38C001BB4D2 /* Icon@2x.png */,
+				BD8B5AE2174BA9E500EF82A0 /* icon.png */,
+				BD8B5AE3174BA9E500EF82A0 /* icon@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -244,11 +244,11 @@
 				BDFF508316E5D72C009ED9AE /* InfoPlist.strings in Resources */,
 				BDFF50D316E6498E009ED9AE /* CurrencyKeys.plist in Resources */,
 				BDCA395E16F7030C008ACE8B /* InfoPlist.strings in Resources */,
-				BD84A0EF16FFA38C001BB4D2 /* Icon.png in Resources */,
-				BD84A0F016FFA38C001BB4D2 /* Icon@2x.png in Resources */,
 				BDC1DC39173EB8130057BC7F /* Default-568h@2x.png in Resources */,
 				BD8B5ADA174BA5AD00EF82A0 /* NavBarBg.png in Resources */,
 				BD8B5ADB174BA5AD00EF82A0 /* NavBarBg@2x.png in Resources */,
+				BD8B5AE4174BA9E500EF82A0 /* icon.png in Resources */,
+				BD8B5AE5174BA9E500EF82A0 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
