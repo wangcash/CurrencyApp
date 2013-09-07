@@ -1,4 +1,7 @@
 platform :ios
+
+inhibit_all_warnings!
+
 pod 'JSONKit'
 pod 'Reachability'
 pod 'ASIHTTPRequest'
